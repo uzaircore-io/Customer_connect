@@ -1,0 +1,1234 @@
+# MASTER DEVELOPMENT PROMPT — CUSTOMERCONNECT
+
+## ROLE AND OBJECTIVE
+
+Act as a senior Python software architect, full-stack developer, UI/UX designer, database engineer, and quality assurance specialist.
+
+Your task is to build a complete, functional, professionally structured, GitHub-ready Python application named:
+
+**CustomerConnect — Intelligent Local Business Discovery, Comparison, Booking & Commerce Platform**
+
+Tagline: **Discover. Compare. Connect. Reserve.**
+
+I am a B.Tech Artificial Intelligence & Data Science student developing this application as a college project.
+
+I want a real working application, not a static mockup, incomplete prototype, or collection of disconnected code examples.
+
+The application must be visually outstanding, easy to demonstrate to my professor, properly structured, and realistically achievable as a focused MVP.
+
+**Most important requirements:**
+
+1. Write all application logic in Python.
+2. Use Streamlit for the Python-authored frontend.
+3. Use SQLite for persistent storage.
+4. Use Pandas and Plotly for processing and analytics.
+5. Follow proper software engineering practices.
+6. Include every functional feature described below.
+7. Follow the uploaded reference image as closely as technically possible.
+8. Include meaningful, smooth animations.
+9. Include realistic fictional dummy data.
+10. Create a complete README.md for GitHub.
+11. Ensure all essential buttons, filters, forms, and workflows actually work.
+12. Never present simulated payments or fictional reviews as real transactions or verified customer experiences.
+13. Optimize the initial implementation for a four-hour development window.
+14. Do not silently omit any requirement. If something cannot be fully implemented within the MVP, identify it clearly and implement a functional demo alternative.
+
+---
+
+# PART 1 — STRICT TECHNOLOGY STACK
+
+Use:
+
+- Python 3.11 or newer
+- Streamlit
+- SQLite3
+- Pandas
+- Plotly
+- Python standard library wherever possible
+- Pillow for image processing if necessary
+- Pytest for essential tests
+- Git and GitHub
+
+Frontend must be written primarily with Python Streamlit.
+
+Backend must be implemented using modular Python files.
+
+Use Streamlit session state for temporary UI state and SQLite for persistent data.
+
+Avoid React, Next.js, Node.js, Django, and separate JavaScript frontend frameworks.
+
+CSS and minimal HTML may be embedded through Python where needed for accurate styling, botanical decorations, transitions, and animations. Do not introduce a separate frontend build process.
+
+Use parameterized SQL queries, transactions, validation, exception handling, and clean function separation.
+
+Do not require paid APIs for the MVP.
+
+---
+
+# PART 2 — EXACT VISUAL THEME
+
+## CRITICAL: REFERENCE IMAGE
+
+I have attached a visual reference image.
+
+Study this image carefully before generating the interface.
+
+The CustomerConnect opening page must reproduce its overall visual composition as closely as possible.
+
+The image is the primary design specification.
+
+Do not replace the design with a generic Streamlit dashboard.
+
+## Visual composition
+
+The landing page must include:
+
+1. A full-page warm cream/beige background.
+2. A large centered rounded rectangular outline or frame.
+3. A thin, muted taupe-gray border around the main frame.
+4. Elegant dried botanical branches on both sides.
+5. Terracotta ceramic vases near the lower corners.
+6. Soft peach and beige abstract shapes in the background.
+7. A large centered headline inside the main frame.
+8. Minimal navigation near the top.
+9. A long white pill-shaped search bar.
+10. A terracotta-colored search button.
+11. A floating horizontal product showcase overlapping the lower part of the frame.
+12. Beautiful product thumbnails with names and prices.
+13. Soft shadows, warm lighting, spacious layouts, and premium typography.
+
+## Branding modifications
+
+Replace the reference branding with:
+
+**CustomerConnect**
+
+Main headline:
+
+**Discover Local. Shop Smarter.**
+
+Supporting text:
+
+"Find trusted local businesses, compare better options, and connect with confidence."
+
+Search placeholder:
+
+"Search products, services, or local businesses..."
+
+Primary button:
+
+**Explore Nearby**
+
+Product showcase heading:
+
+**Discover Your Next Favorite**
+
+Navigation:
+
+- Home
+- Explore
+- Categories
+- Appointments
+- My Orders
+- Business Studio
+
+## Color palette
+
+Use these design tokens consistently:
+
+- Main cream background: #F8E8D0
+- Warm ivory: #FFFDF8
+- Light beige: #E9DDCB
+- Soft peach: #E9C5A4
+- Terracotta: #BF7149
+- Coffee brown: #80503A
+- Deep brown text: #4A3024
+- Muted sage green: #D8E1D3
+- Soft border: #D7C4AF
+
+No dark-mode dashboard.
+
+No neon colors.
+
+No overly saturated gradients.
+
+No generic blue corporate dashboard.
+
+The entire application must preserve this elegant botanical beige/cream/terracotta design language.
+
+## Typography
+
+Use professional, highly readable typography.
+
+Suggested pairing:
+
+- Elegant serif font for major headings
+- Clean sans-serif font for navigation, cards, buttons, and forms
+
+Maintain consistent hierarchy, spacing, and contrast.
+
+## Image assets
+
+Use the uploaded image as the visual reference.
+
+If suitable botanical or product images are unavailable, generate or use locally stored original or appropriately licensed assets.
+
+Never invent asset paths or rely on broken external image URLs.
+
+If exact photographic botanical assets cannot be reproduced, use the closest feasible decorative composition while preserving the reference layout.
+
+## Responsive design
+
+Support desktop and laptop screens first.
+
+Also provide a usable tablet and mobile layout.
+
+The floating product showcase should scroll horizontally on smaller screens.
+
+Avoid overlapping text, clipped cards, or broken navigation.
+
+---
+
+# PART 3 — ANIMATIONS AND MICROINTERACTIONS
+
+Implement subtle, premium animations.
+
+Required animations:
+
+### Landing page
+
+- Main headline fades in smoothly.
+- Supporting text appears with a slight delay.
+- Search bar slides upward gently.
+- Botanical decorations have extremely subtle movement.
+- Floating product cards have a slow floating effect.
+- Product carousel supports horizontal scrolling.
+
+### Navigation
+
+- Smooth hover transitions.
+- Active navigation highlighting.
+- Buttons gently lift on hover.
+- Navigation remains visually consistent across pages.
+
+### Marketplace
+
+- Product cards show soft hover elevation.
+- Filter updates display loading feedback when needed.
+- Selected comparison items show a clear visual state.
+- Match scores have subtle progress animations.
+
+### Booking and checkout
+
+- Selected appointment slots have smooth state transitions.
+- Booking success shows a tasteful confirmation animation.
+- Order confirmation displays a clear success state.
+
+### Accessibility
+
+Respect reduced-motion preferences.
+
+Avoid continuous distracting animation.
+
+Avoid excessive page reruns and animation-related performance issues.
+
+Do not sacrifice application functionality for visual effects.
+
+---
+
+# PART 4 — APPLICATION ARCHITECTURE
+
+Build three application areas.
+
+## A. Customer Portal
+
+Customers can:
+
+- Search businesses
+- Discover products
+- Discover services
+- Apply advanced filters
+- Use multi-priority sorting
+- Compare vendors
+- Read and submit ratings
+- Check opening hours
+- Contact vendors
+- Reserve products
+- Choose payment methods
+- Book appointments
+- View orders and reservations
+- Open shop directions
+
+## B. Business Owner Studio
+
+Business owners can:
+
+- View business details
+- Add and edit products
+- Update product prices
+- Manage stock
+- Manage services
+- Configure opening hours
+- Configure appointment slots
+- View reservations
+- View orders
+- View customer inquiries
+- View analytics
+
+For the four-hour MVP, a clearly labeled demo business selector is acceptable.
+
+Do not falsely claim this is secure authentication.
+
+## C. Admin Overview
+
+Provide a basic demo admin dashboard showing:
+
+- Total businesses
+- Total products
+- Total services
+- Total orders
+- Total appointments
+- Category distribution
+- Recent platform activity
+
+Full role-based authentication can be a future enhancement.
+
+---
+
+# PART 5 — UNIVERSAL BUSINESS DISCOVERY
+
+Support these initial categories:
+
+1. Watches
+2. Jewelry
+3. Electronics
+4. Clothing
+5. Salons
+6. Clinics
+7. Restaurants
+8. Home Services
+9. Tutors
+10. Repair Services
+
+Customers must be able to search by:
+
+- Business name
+- Product name
+- Service name
+- Category
+- Area
+- Keywords
+
+Each business card should show:
+
+- Business name
+- Category
+- Product/service image
+- Rating
+- Number of reviews
+- Approximate distance
+- Price or starting price
+- Open/Closed status
+- Stock or service availability
+- Contact options
+- View Details button
+
+All matching results must remain accessible.
+
+Never arbitrarily limit results to only three businesses.
+
+Implement pagination or a Show More mechanism.
+
+---
+
+# PART 6 — MULTIMATCH PRO ENGINE
+
+This is the core distinguishing feature of CustomerConnect.
+
+Implement a custom Python recommendation engine that combines hard filters and personalized ranking.
+
+## A. Hard filters
+
+Customers can apply multiple filters simultaneously:
+
+- Maximum budget
+- Minimum rating
+- Maximum distance
+- Category
+- Area
+- In-stock availability
+- Open Now
+- Verified business status
+- Warranty available
+- Return policy available
+- WhatsApp contact available
+- Phone contact available
+- Email contact available
+- Online payment supported
+- COD supported
+- Pay at Pickup supported
+- Pre-booking available
+- Appointment available
+
+Hard filters must use AND logic by default.
+
+A vendor must satisfy every selected mandatory condition to appear in exact matches.
+
+## B. Multi-priority ranking
+
+Allow customers to select several sorting priorities together:
+
+- Highest Rating
+- Nearest Distance
+- Lowest Price
+- Best Value
+- Most Reviewed
+- Verified Business
+- Availability
+
+Support two ranking modes:
+
+**Weighted Smart Ranking:** Combine selected criteria into one normalized match score.
+
+**Priority Order Sorting:** Apply criteria in the customer's chosen order, using subsequent criteria as tie-breakers.
+
+Do not confuse filtering with sorting.
+
+## C. SmartMatch algorithm
+
+Implement a transparent scoring formula using normalized values.
+
+Example:
+
+Match Score =
+0.30 × Rating Score
++ 0.25 × Distance Score
++ 0.25 × Price Score
++ 0.20 × Trust Score
+
+Weights must be adjustable when customers change priorities.
+
+Handle missing values carefully.
+
+Prevent division by zero.
+
+Explain normalization in code comments.
+
+Do not treat the calculated score as proof of real product quality.
+
+## D. Why This Vendor?
+
+Show a compatibility breakdown:
+
+- Budget match
+- Rating match
+- Distance convenience
+- Availability
+- Trust indicators
+- Contact compatibility
+
+Explain why a vendor ranked highly.
+
+## E. Near Match
+
+If exact matches are unavailable:
+
+- Show a clear "No exact matches" message.
+- Explain which filters may be too restrictive.
+- Offer clearly labeled near matches.
+- Never silently violate mandatory conditions.
+
+---
+
+# PART 7 — VENDOR COMPARISON
+
+Allow customers to compare at least four vendors side by side.
+
+Compare:
+
+- Product/service price
+- Rating
+- Review count
+- Distance
+- Opening hours
+- Stock availability
+- Warranty
+- Return policy
+- Payment methods
+- WhatsApp availability
+- Pickup availability
+- Delivery availability
+
+Highlight meaningful differences.
+
+Allow customers to remove vendors from the comparison.
+
+Use actual database records.
+
+---
+
+# PART 8 — CUSTOMER RATINGS AND REVIEWS
+
+Implement:
+
+- 1–5 star rating
+- Written review
+- Average rating calculation
+- Review count
+- Recent reviews
+- Highest-rated sorting
+- Review submission form
+
+Where possible, link a review to a completed demo order or booking.
+
+Distinguish verified transaction reviews from unverified reviews.
+
+Prevent duplicate reviews for the same transaction.
+
+Never label fictional seeded reviews as real customer testimonials.
+
+---
+
+# PART 9 — VENDOR OPENING HOURS
+
+Every vendor must have:
+
+- Monday–Sunday schedule
+- Opening time
+- Closing time
+- Weekly closed days
+- Open Now / Closed Now status
+- Next opening time
+- Appointment availability
+
+Use the business's local timezone.
+
+For the initial Srinagar dataset, use Asia/Kolkata.
+
+Support overnight schedules correctly.
+
+Appointment slots must fall within applicable service hours.
+
+Business owners must be able to edit their opening hours.
+
+---
+
+# PART 10 — VENDOR CONNECT HUB
+
+Every vendor profile must provide:
+
+### WhatsApp
+
+Open a WhatsApp chat using the business's stored contact number.
+
+Include an optional pre-filled product inquiry message.
+
+### Phone
+
+Provide a clickable telephone link.
+
+### Email
+
+Open an email draft addressed to the vendor.
+
+### Business address
+
+Show the stored shop address and area.
+
+### Directions
+
+Provide an Open in Google Maps button.
+
+Use stored coordinates where available.
+
+Validate contact data before generating links.
+
+Do not automatically send messages or initiate calls without customer action.
+
+---
+
+# PART 11 — UNIVERSAL APPOINTMENT BOOKING
+
+Support appointment-based businesses such as:
+
+- Salons
+- Clinics
+- Tutors
+- Consultants
+- Repair services
+
+Booking workflow:
+
+1. Select business.
+2. Select service.
+3. View service price and duration.
+4. Select appointment date.
+5. View available time slots.
+6. Select a time slot.
+7. Enter required customer details.
+8. Confirm booking.
+9. Generate booking reference.
+10. Store booking in SQLite.
+
+Implement SlotGuard to prevent double bookings.
+
+Use SQLite transactions and appropriate uniqueness/conflict constraints.
+
+Booking status values:
+
+- Pending
+- Confirmed
+- Completed
+- Cancelled
+
+The system must not offer a slot that conflicts with an existing confirmed booking.
+
+For healthcare businesses, provide scheduling only, not medical diagnosis or clinical recommendations.
+
+---
+
+# PART 12 — PRODUCT PRE-BOOKING AND RESERVATION
+
+Implement ReserveNow.
+
+Customers must be able to reserve products before visiting a shop.
+
+Reservation workflow:
+
+1. Select product.
+2. Select vendor.
+3. Select quantity.
+4. Check stock.
+5. Choose pickup or delivery.
+6. Select payment preference.
+7. Confirm reservation.
+8. Generate reservation ID.
+9. Save reservation in SQLite.
+
+Reservation statuses:
+
+- Pending
+- Confirmed
+- Ready for Pickup
+- Collected
+- Cancelled
+- Expired
+
+Prevent reservations from exceeding available inventory.
+
+Support configurable reservation expiry.
+
+Restore reserved stock when eligible reservations are cancelled or expire.
+
+Use database transactions to prevent inconsistent stock updates.
+
+---
+
+# PART 13 — PAYMENT OPTIONS
+
+Support three main payment choices:
+
+## 1. Pay Now
+
+Show a simulated online checkout.
+
+Display:
+
+- Product name
+- Quantity
+- Price
+- Total
+- Payment method
+- Confirmation status
+
+Label it clearly:
+
+**Demo Payment — No Real Money Charged**
+
+Never request or store actual card numbers, CVVs, bank credentials, or UPI PINs.
+
+## 2. Cash on Delivery
+
+Allow COD only when the vendor supports delivery and COD.
+
+Record the order as payment pending.
+
+## 3. Pay at Pickup
+
+Allow customers to reserve products and pay when collecting them.
+
+Record payment as pending until manually marked paid.
+
+Payment status must be separate from order status.
+
+Use values such as:
+
+- Unpaid
+- Demo Paid
+- Pending at Pickup
+- Pending COD
+- Refunded (demo)
+
+For future real payments, design an integration interface for a secure payment provider, but do not pretend a real payment gateway is already connected.
+
+---
+
+# PART 14 — SHOP LOCATION AND DIRECTIONS
+
+Each business should store:
+
+- Shop name
+- Area
+- Full address
+- Latitude
+- Longitude
+- Opening hours
+
+Use the Haversine formula to calculate approximate straight-line distance between selected customer area and business coordinates.
+
+Label the result as approximate distance.
+
+Provide an external Google Maps directions link.
+
+Do not claim actual driving time or live traffic without a mapping API.
+
+---
+
+# PART 15 — BUSINESS OWNER STUDIO
+
+Build a visually professional dashboard using the same cream/beige theme.
+
+Include:
+
+- Business profile
+- Product management
+- Service management
+- Stock management
+- Opening hours editor
+- Appointment schedule
+- Order list
+- Reservation list
+- Customer inquiries
+- Basic analytics
+
+Provide forms to add or edit products and services.
+
+Use validation and persistent SQLite writes.
+
+Include confirmation before destructive operations.
+
+---
+
+# PART 16 — ANALYTICS DASHBOARD
+
+Use Plotly for charts.
+
+Include:
+
+- Total businesses
+- Total products
+- Total services
+- Total appointments
+- Total reservations
+- Total orders
+- Product category distribution
+- Booking trends
+- Popular services
+- Order status distribution
+
+Business-specific analytics must use the selected business's data.
+
+Do not display fabricated analytics as live production activity.
+
+---
+
+# PART 17 — SQLITE DATABASE DESIGN
+
+Create a normalized relational schema.
+
+Required tables:
+
+1. businesses
+2. business_hours
+3. products
+4. services
+5. appointment_slots
+6. appointments
+7. customers
+8. reviews
+9. reservations
+10. orders
+11. order_items
+12. payments
+13. inquiries
+14. favorites
+
+Add foreign keys, indexes, uniqueness constraints, and appropriate CHECK constraints.
+
+Use clear primary keys and relationships.
+
+Enable SQLite foreign key enforcement.
+
+Keep payment status independent from fulfillment status.
+
+Use UTC timestamps for stored events and convert to local time for display.
+
+Include database initialization and migration/version handling appropriate for a small MVP.
+
+---
+
+# PART 18 — REALISTIC DUMMY DATA
+
+Create a `seed_data.py` file.
+
+Generate fictional, realistic demonstration data.
+
+Target dataset:
+
+- 60 local businesses
+- 180 products
+- 75 services
+- 240 appointment slots
+- 80 customer reviews
+- 40 sample orders
+- Sample reservations and inquiries
+
+Use Srinagar-area labels such as:
+
+- Lal Chowk
+- Rajbagh
+- Jawahar Nagar
+- Sanat Nagar
+- Baghat
+- Rawalpora
+- Nowgam
+- Barzulla
+
+All businesses must have fictional names.
+
+Use fictional contact details and clearly mark them as demo records.
+
+Do not accidentally generate contact links that send customers to real unrelated people.
+
+For live contact demonstrations, allow the developer to configure a controlled test number or email.
+
+Use reproducible random seeds.
+
+The seeding script must be idempotent and must not create duplicate data on repeated execution.
+
+Include a safe Reset Demo Data function available only in clearly labeled demo/admin mode.
+
+---
+
+# PART 19 — REQUIRED APPLICATION SCREENS
+
+Build the following screens:
+
+1. Landing Page
+2. Explore Businesses
+3. Advanced Search / MultiMatch Pro
+4. Business Details
+5. Product Details
+6. Vendor Comparison
+7. Appointment Booking
+8. Product Reservation
+9. Checkout
+10. My Orders & Bookings
+11. Store Location
+12. Business Owner Studio
+13. Analytics
+14. Admin Demo Overview
+
+Maintain consistent navigation, typography, cards, colors, and interaction patterns.
+
+All pages must be connected through working navigation.
+
+---
+
+# PART 20 — PROJECT FILE STRUCTURE
+
+Use a clean structure similar to:
+
+CustomerConnect/
+│
+├── app.py
+├── config.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+├── seed_data.py
+│
+├── database/
+│   ├── __init__.py
+│   ├── connection.py
+│   ├── schema.py
+│   └── repositories.py
+│
+├── core/
+│   ├── __init__.py
+│   ├── matching.py
+│   ├── filters.py
+│   ├── distance.py
+│   ├── bookings.py
+│   ├── reservations.py
+│   ├── payments.py
+│   ├── reviews.py
+│   └── analytics.py
+│
+├── ui/
+│   ├── __init__.py
+│   ├── theme.py
+│   ├── components.py
+│   ├── landing.py
+│   ├── explore.py
+│   ├── business_details.py
+│   ├── comparison.py
+│   ├── appointments.py
+│   ├── checkout.py
+│   ├── business_studio.py
+│   └── admin.py
+│
+├── assets/
+│   ├── images/
+│   └── styles/
+│
+└── tests/
+    ├── test_matching.py
+    ├── test_filters.py
+    ├── test_bookings.py
+    └── test_reservations.py
+
+Adjust this structure if needed, but maintain clear separation of concerns.
+
+---
+
+# PART 21 — PROFESSIONAL SOFTWARE ENGINEERING REQUIREMENTS
+
+Follow these rules:
+
+- Modular Python architecture
+- Meaningful variable and function names
+- Type hints where useful
+- Docstrings for important functions
+- Input validation
+- Parameterized SQL
+- Proper database transactions
+- Foreign key constraints
+- Error handling
+- No hardcoded passwords or API secrets
+- No unnecessary global mutable state
+- Reusable UI components
+- Clear separation between UI, business logic, and data access
+- No duplicated business logic
+- Deterministic sample data
+- Functional navigation
+- Safe handling of invalid and empty search results
+- No dead buttons
+- No misleading success messages
+- No fake real-world payment confirmations
+
+Do not overengineer the MVP with unnecessary microservices.
+
+---
+
+# PART 22 — TESTING REQUIREMENTS
+
+Write meaningful automated tests for:
+
+1. Budget filtering
+2. Rating filtering
+3. Distance filtering
+4. Combined filters
+5. Multiple ranking priorities
+6. Empty search results
+7. Missing rating handling
+8. Appointment conflict prevention
+9. Reservation stock validation
+10. Reservation cancellation
+11. Payment status transitions
+12. Review average calculations
+13. Opening hours calculations
+14. Overnight business schedules
+
+Also provide a manual testing checklist for the Streamlit UI.
+
+---
+
+# PART 23 — README.MD
+
+Generate a complete, professional GitHub README.
+
+Required sections:
+
+- CustomerConnect project title
+- Project tagline
+- Overview
+- Problem statement
+- Proposed solution
+- Key features
+- Technology stack
+- System architecture
+- Project folder structure
+- Database schema overview
+- SmartMatch algorithm explanation
+- Screenshots section
+- Installation requirements
+- Step-by-step Windows setup
+- Virtual environment creation
+- Dependency installation
+- Database initialization
+- Dummy data generation
+- How to run the application
+- How to run tests
+- Customer demo workflow
+- Business owner demo workflow
+- Limitations of the MVP
+- Demo payment disclaimer
+- Future enhancements
+- GitHub submission instructions
+- Author information placeholder
+- License information placeholder
+
+Include these Windows commands where appropriate:
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe seed_data.py
+.\.venv\Scripts\python.exe -m streamlit run app.py
+```
+
+Include troubleshooting instructions for common Python PATH, pip, Streamlit, and SQLite issues.
+
+Do not invent screenshots. Provide a screenshots folder convention and instructions for capturing real screenshots.
+
+---
+
+# PART 24 — GITHUB REQUIREMENTS
+
+Prepare the project for GitHub.
+
+Create `.gitignore` covering:
+
+- .venv/
+- __pycache__/
+- .pytest_cache/
+- *.pyc
+- .env
+- .streamlit/secrets.toml
+- Runtime SQLite database files
+- Temporary files
+
+Keep the database initialization and demo seed scripts in the repository.
+
+Provide Git commands for initialization, committing, and pushing.
+
+Never include secrets or real customer information.
+
+---
+
+# PART 25 — DEMONSTRATION FOR PROFESSOR
+
+The application must support this live demonstration:
+
+### Demo 1 — Marketplace Search
+
+Search for watches under ₹15,000.
+
+Apply minimum rating 4.5 and maximum distance 5 km.
+
+Show all matching vendors.
+
+### Demo 2 — MultiMatch Pro
+
+Select multiple priorities simultaneously:
+
+- Highest Rating
+- Nearest Distance
+- Best Price
+
+Show ranking changes and explain the score.
+
+### Demo 3 — Vendor Comparison
+
+Select four vendors and compare their details.
+
+### Demo 4 — Contact and Location
+
+Open vendor profile.
+
+Show business hours, contact methods, and Google Maps directions.
+
+### Demo 5 — Product Reservation
+
+Reserve a product and select Pay at Pickup.
+
+Show reservation confirmation and saved order.
+
+### Demo 6 — Payment Simulation
+
+Choose Pay Now.
+
+Complete the simulated checkout.
+
+Clearly display that no real money was charged.
+
+### Demo 7 — Appointment Booking
+
+Book a salon appointment.
+
+Attempt to book the same slot again.
+
+Show that SlotGuard prevents duplicate booking.
+
+### Demo 8 — Customer Review
+
+Submit a demo review.
+
+Show the updated rating calculation.
+
+### Demo 9 — Business Dashboard
+
+Open Business Studio.
+
+Show bookings, orders, inventory, and analytics.
+
+---
+
+# PART 26 — FOUR-HOUR IMPLEMENTATION PRIORITIES
+
+Target a four-hour MVP.
+
+Development sequence:
+
+**Stage 1: Foundation**
+- Environment setup
+- Project structure
+- SQLite schema
+- Seed data
+
+**Stage 2: Visual Foundation**
+- Reference-matched landing page
+- Botanical cream/beige theme
+- Navigation
+- Product showcase
+
+**Stage 3: Marketplace**
+- Search
+- Multi-filters
+- Multi-priority ranking
+- Business profiles
+- Vendor comparison
+
+**Stage 4: Transactions**
+- Appointments
+- Reservations
+- Simulated payments
+- Orders
+- Contact links
+- Directions
+
+**Stage 5: Finalization**
+- Reviews
+- Opening hours
+- Basic analytics
+- Tests
+- README
+- GitHub preparation
+
+Prioritize a working end-to-end system over unnecessary complexity.
+
+If the time limit is tight, simplify secondary screens and advanced charts rather than removing core search, booking, reservation, or database functionality.
+
+---
+
+# PART 27 — FUTURE ROADMAP
+
+Document these features as future enhancements, not falsely implemented MVP features:
+
+- AI Shopping Assistant
+- Conversational product search
+- Real-time Google Maps integration
+- Actual travel-time calculations
+- Live business inventory synchronization
+- Secure payment gateway integration
+- Real vendor authentication
+- Customer accounts
+- Verified purchase reviews
+- Price-drop alerts
+- Real-time customer-vendor messaging
+- Appointment reminders
+- Push notifications
+- AI demand forecasting
+- Voice search
+- Multilingual support
+- Android/iOS mobile apps
+- Business subscription plans
+- Fraud detection
+- Cloud deployment
+
+---
+
+# PART 28 — OUTPUT AND DELIVERY INSTRUCTIONS
+
+Do not merely describe how to build CustomerConnect.
+
+Actually generate the application source code.
+
+If the environment supports file creation, create the complete project directory and all required files.
+
+If direct file creation is unavailable, provide every source file in clearly labeled code blocks with its exact relative path.
+
+Do not skip files.
+
+Do not leave TODO placeholders for essential MVP functionality.
+
+Do not use pseudocode in place of working Python.
+
+Provide a valid `requirements.txt`.
+
+Provide a working `seed_data.py`.
+
+Provide a complete `README.md`.
+
+Provide automated tests.
+
+Provide the exact command needed to launch the application.
+
+When possible, run the application and tests, inspect errors, and correct them.
+
+If you cannot execute the application, clearly state that it is untested rather than claiming success.
+
+After implementation, provide:
+
+1. Complete project structure.
+2. Implemented features checklist.
+3. Installation instructions.
+4. Run instructions.
+5. Test results or testing limitations.
+6. Demo walkthrough.
+7. Known limitations.
+8. Future roadmap.
+9. GitHub upload steps.
+
+---
+
+# FINAL NON-NEGOTIABLE INSTRUCTIONS
+
+The visual design must closely follow my uploaded reference image.
+
+The opening page must have the same warm botanical aesthetic, centered frame, cream background, terracotta accents, elegant product showcase, and premium minimal appearance.
+
+CustomerConnect branding must replace the reference branding.
+
+All essential features must be genuinely functional.
+
+Multi-filtering and multi-priority sorting are mandatory.
+
+Product reservations, appointment bookings, simulated payments, vendor contact options, location directions, reviews, opening hours, and business analytics must be included.
+
+The codebase must be Python-first, clean, modular, readable, and suitable for a B.Tech college project.
+
+The final application should feel like a polished early-stage startup product, not a basic classroom form application.
+
+**Begin by inspecting the attached reference image, then create the complete CustomerConnect project.**

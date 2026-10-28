@@ -1,0 +1,6 @@
+{
+  "name": "CustomerConnect",
+  "description": "Intelligent Local Business Discovery, Comparison, Booking & Commerce Platform with MultiMatch Pro, SlotGuard, and ReserveNow.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
